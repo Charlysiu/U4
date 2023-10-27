@@ -1,0 +1,54 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package javaapplication1;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Usuario
+ */
+public class JavaApplication1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double[] num = {20.5, 40.6, 78.4, 94.7, 55.3, 22.6, 84.3};
+        boolean salir = true;
+        while (salir) {
+            System.out.println("Menu: ");
+            System.out.println("1 Multiplicar los elementos?");
+            System.out.println("2 Sumar los elemntos del arreglo?");
+            System.out.println("Salir");
+            System.out.println("Ingrese una opcion");
+            int opcion = scanner.nextInt();
+            switch (opcion) {
+                case 1:
+                    double suma = 0;
+                    for (double elemento : num) {
+                        suma += elemento;
+                    }
+                    System.out.println("La suma de los elemntos es " + suma);
+                    break;
+                case 2:
+                    double multiplicación = 1;
+                    for (double elemento : num) {
+                        multiplicación *= elemento;
+                    }
+                    System.out.println("La multiplicación de los elementos es " + multiplicación);
+                    break;
+                case 3:
+                    salir = false;
+                    break;
+                default:
+                    System.out.println("La opcion es invalida ");
+                    break;
+
+            }
+        }
+    }
+}
